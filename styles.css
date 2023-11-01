@@ -1,0 +1,327 @@
+/* Estilos generales */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #0E1D39, #5C0BB7, #2D6BB9);
+  background-size: 400% 400%;
+  animation: gradientAnimation 30s linear infinite;
+  color: white;
+  transition: background 0.5s;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+/* Estilos para el encabezado */
+header {
+  text-align: center;
+  padding: 20px;
+}
+
+.registro, .inicio-sesion, .suscribirse {
+  color: white;
+}
+
+.logo {
+  max-width: 30px;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+  float: left;
+  margin-right: 20px;
+}
+
+.logo img:hover {
+  transform: scale(1.1) rotate(10deg);
+}
+
+/* Menú hamburguesa */
+.menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  cursor: pointer;
+  font-size: 26px;
+  color: white;
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.menu-icon span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  margin: 6px 0;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+}
+
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.menu li {
+  margin-right: 20px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: #9400D3;
+}
+
+/* Secciones */
+section {
+  padding: 50px 0;
+  text-align: center;
+}
+
+/* Cards */
+.product-card {
+  max-width: 320px;
+  margin: 20px;
+  text-align: center;
+  background: #8B25DF;
+  border-radius: 10px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  color:white;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+  background: hwb(280 5% 8%);
+}
+
+.product-card img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.product-card h3 {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.product-card p {
+  font-size: 16px;
+}
+
+.product-card p.price {
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+
+
+/* Beneficios */
+.benefits {
+  background: #9F2AE2;
+  color: white;
+}
+
+.benefit-item {
+  margin: 20px;
+  background: #5617E7;
+  border-radius: 10px;
+  padding: 20px;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.benefit-item i {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #FFC0CB;
+  transition: transform 0.3s;
+}
+
+.benefit-item p {
+  font-size: 18px;
+}
+
+.benefit-item:hover {
+  transform: scale(1.05);
+  background: #870CA0;
+}
+
+/* Contacto */
+.contact {
+  background: linear-gradient(135deg, #48087C, #630BB6);
+  color: white;
+}
+
+.contact-info {
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+#preguntas {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid white;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+/* Footer */
+.footer {
+  background: linear-gradient(135deg, #7F18D3, #9A4ADB);
+  color: #FFFFFF;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.redes-sociales {
+  margin-top: 20px;
+}
+
+.icono-red-social {
+  font-size: 30px;
+  color: #FFFFFF;
+  margin-right: 10px;
+  transition: transform 0.3s;
+}
+
+.icono-red-social:hover {
+  transform: scale(1.2);
+}
+
+/* Cambiar color de texto de suscripción a blanco */
+.suscripcion {
+  color: white;
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  #menu-toggle:checked + .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    width: 100%;
+    top: 60px;
+    left: 0;
+    transition: 0.3s;
+  }
+
+  .menu li {
+    display: block;
+    margin: 10px 0;
+    padding: 10px 0;
+  }
+
+  .menu a {
+    color: white;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  #menu-toggle:checked + .menu-icon {
+    display: none;
+  }
+}
+
+.menu a:hover {
+  color: #59087C;
+}
+
+/* Estilos para pantallas pequeñas (360x340) */
+/* Define tus estilos específicos para pantallas pequeñas aquí si es necesario */
+
+/* Estilos para inicio de sesión y registro */
+.login, .register {
+  padding: 20px;
+  text-align: center;
+  background: #8B25DF;
+  border-radius: 10px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  color: white;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.login:hover, .register:hover {
+  transform: scale(1.05);
+  background: #6E12C5;
+}
+
+.login input, .register input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin: 10px 0;
+  border: 2px solid white;
+  border-radius: 5px;
+  background: transparent;
+  color: white;
+}
+
+.login button, .register button {
+  background: #6E12C5;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.login button:hover, .register button:hover {
+  background: #48087C;
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+  .login, .register {
+    width: 80%;
+  }
+}
